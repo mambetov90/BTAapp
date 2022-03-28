@@ -28,7 +28,7 @@
 ### Tests
 
 - In order to execute a test, select the BtaTest file
-- GIT link: https://github.com/mambetov90/BTA.git
+- GIT link: https://github.com/mambetov90/BTAapp.git
 
 ### Credits
 
