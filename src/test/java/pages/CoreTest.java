@@ -5,12 +5,9 @@ import com.codeborne.selenide.Selenide;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.WebDriver;
 
 
 abstract public class CoreTest {
-    public static WebDriver driver;
-
 
     public void setUp() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
