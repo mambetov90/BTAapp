@@ -16,11 +16,11 @@ abstract public class CoreTest {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
-//        Configuration.pageLoadTimeout = 20000;
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "1920x1080";
-        Configuration.reportsUrl = "https://gsmserver.com/*";
-//        Configuration.startMaximized = true;
+        //Configuration.startMaximized = true;
+        //Configuration.pageLoadTimeout = 20000;
+
     }
 
     @Before
