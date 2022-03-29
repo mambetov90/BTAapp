@@ -83,7 +83,5 @@ public class BtaTest extends CoreTest {
 
         assertTrue(insuredTravelerPersonalId.should(visible).isDisplayed());
         assertTrue(insuredTravelerPersonalId.getAttribute("data-store-value").isEmpty());
-
-
     }
 }
