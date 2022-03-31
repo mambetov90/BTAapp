@@ -4,9 +4,6 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.CoreTest;
-import pages.MainPage;
-import pages.PolicyPage;
-import pages.TravelInsurancePage;
 
 import java.time.Duration;
 
@@ -30,10 +27,6 @@ public class BtaTest extends CoreTest {
 
     @Test
     public void insurancePolicyTest() {
-
-        MainPage mainPage = new MainPage();
-        TravelInsurancePage travelInsurancePage = new TravelInsurancePage();
-        PolicyPage policyPage = new PolicyPage();
 
         log.info("Atvērt BTA portālu un pārvietoties uz ceļojuma polišu iegādes formu");
         mainPage
