@@ -8,21 +8,24 @@ import org.junit.Before;
 
 
 abstract public class CoreTest {
-
+    public MainPage mainPage;
+    public TravelInsurancePage travelInsurancePage;
+    public PolicyPage policyPage;
+    
     public void setUp() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "1920x1080";
-        //Configuration.startMaximized = true;
-        //Configuration.pageLoadTimeout = 20000;
-
     }
 
     @Before
     public void init() throws InterruptedException {
         setUp();
+        mainPage = new MainPage();
+        travelInsurancePage = new TravelInsurancePage();
+        policyPage = new PolicyPage();
     }
 
     @After
