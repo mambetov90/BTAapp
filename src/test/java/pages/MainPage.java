@@ -1,32 +1,30 @@
+
 package pages;
 
+import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import readProps.ConfigProvider;
 
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
-
 public class MainPage extends CoreTest {
-
-    private final SelenideElement cookiesPopup = $("div[class='cookie-notice strong']");
-    private final SelenideElement acceptButton = $x("//button[@class='button green allow']");
-    private final SelenideElement travelMenuLabel = $(byText("Ceļojumi"));
+    private final SelenideElement cookiesPopup = Selenide.$("div[class='cookie-notice strong']");
+    private final SelenideElement acceptButton = Selenide.$x("//button[@class='button green allow']");
+    private final SelenideElement travelMenuLabel = Selenide.$(Selectors.byText("Ceļojumi"));
 
     public MainPage() {
         Selenide.open(ConfigProvider.URL);
-        acceptCookies();
+        this.acceptCookies();
     }
 
     public void acceptCookies() {
-        if (cookiesPopup.isDisplayed()) {
-            acceptButton.click();
+        if (this.cookiesPopup.isDisplayed()) {
+            this.acceptButton.click();
         }
+
     }
 
     public TravelInsurancePage openTravelFromMenuPanel() {
-        travelMenuLabel.click();
+        this.travelMenuLabel.click();
         return new TravelInsurancePage();
     }
 }
