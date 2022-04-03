@@ -27,8 +27,8 @@
 
 ### Tests
 
-- In order to execute a test, run the BtaTest file
-- In order to generate the allure report run mvn allure:serve
+- In order to execute test run $mvn test -Dtest=BtaTest
+- In order to generate the allure report run $mvn allure:serve
 - GIT link: https://github.com/mambetov90/BTAapp.git
 
 ### Credits
