@@ -8,8 +8,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class TravelInsurancePage extends CoreTest {
     private final SelenideElement travelDestinationList = $(byId("regionalSelectorRegion-open"));
-    private final SelenideElement countriesButton = $(byId("regionalSelectorCountry"));
-    private final SelenideElement adCountryButton = $("div[class='add']");
+    private final SelenideElement countriesButton = $(byId("regionalSelectorCountry-showListSearch"));
+    private final SelenideElement adCountryButton = $(byId("regionalSelectorCountry-addCountry"));
     private final SelenideElement countrySearchField = $(byId("regionalSelectorCountry-typedValue"));
     private final SelenideElement indiaFromSearchList = $("button[data-value='Indija']");
     private final SelenideElement applyButton = $(byId("regionalSelectorCountry-applyButton"));

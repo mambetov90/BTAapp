@@ -1,6 +1,9 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.CoreTest;
@@ -13,6 +16,8 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static org.junit.Assert.assertTrue;
 
+@RunWith(Cucumber.class)
+@CucumberOptions(plugin = "pretty", features = "src/test/resources/features")
 public class BtaTest extends CoreTest {
 
     private static final Logger log = LoggerFactory.getLogger(BtaTest.class);
