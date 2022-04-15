@@ -19,7 +19,6 @@ public class MainPage extends CoreTest {
         if (this.cookiesPopup.isDisplayed()) {
             this.acceptButton.click();
         }
-
     }
 
     public TravelInsurancePage openTravelFromMenuPanel() {
