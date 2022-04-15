@@ -1,4 +1,3 @@
-
 package pages;
 
 import com.codeborne.selenide.Selectors;
@@ -7,9 +6,9 @@ import com.codeborne.selenide.SelenideElement;
 import readProps.ConfigProvider;
 
 public class MainPage extends CoreTest {
-    private final SelenideElement cookiesPopup = Selenide.$("div[class='cookie-notice strong']");
-    private final SelenideElement acceptButton = Selenide.$x("//button[@class='button green allow']");
-    private final SelenideElement travelMenuLabel = Selenide.$(Selectors.byText("Ceļojumi"));
+    private final SelenideElement cookiesPopup = Selenide.$("div[class='cookie-notice strong']"),
+            acceptButton = Selenide.$x("//button[@class='button green allow']"),
+            travelMenuLabel = Selenide.$(Selectors.byText("Ceļojumi"));
 
     public MainPage() {
         Selenide.open(ConfigProvider.URL);

@@ -20,8 +20,8 @@ abstract public class CoreTest {
         Configuration.driverManagerEnabled = true;
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "1920x1080";
+        Configuration.timeout = 10000;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
-
     }
 
     @Before

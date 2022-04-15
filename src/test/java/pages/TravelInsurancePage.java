@@ -3,19 +3,23 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 
 public class TravelInsurancePage extends CoreTest {
-    private final SelenideElement travelDestinationList = $(byId("regionalSelectorRegion-open"));
-    private final SelenideElement countriesButton = $(byId("regionalSelectorCountry-showListSearch"));
-    private final SelenideElement adCountryButton = $(byId("regionalSelectorCountry-addCountry"));
-    private final SelenideElement countrySearchField = $(byId("regionalSelectorCountry-typedValue"));
-    private final SelenideElement indiaFromSearchList = $("button[data-value='Indija']");
-    private final SelenideElement applyButton = $(byId("regionalSelectorCountry-applyButton"));
-    private final SelenideElement activitiesList = $(byId("travelActivities-open"));
-    private final SelenideElement sportAsActivity = $(byId("travelActivities-popup-select-option-3"));
-    private final SelenideElement calculatePriceButton = $("button[data-type='travelSubmit']");
+    static final SelenideElement travelDestinationList = $(byId("regionalSelectorRegion-open")),
+            countriesButton = $(byId("regionalSelectorCountry-showListSearch")),
+            adCountryButton = $(byId("regionalSelectorCountry-addCountry")),
+            countrySearchField = $(byId("regionalSelectorCountry-typedValue")),
+            indiaFromSearchList = $("button[data-value='Indija']"),
+            applyButton = $(byId("regionalSelectorCountry-applyButton")),
+            activitiesList = $(byId("travelActivities-open")),
+            sportAsActivity = $(byId("travelActivities-popup-select-option-3")),
+            calculatePriceButton = $("button[data-type='travelSubmit']");
+
+    public final SelenideElement indiaCountryLabel = $(byText("Indija")),
+            sportAsActivityLabel = $(byText("Sports"));
 
     public TravelInsurancePage openTravelDestinationList() {
         travelDestinationList.scrollIntoView(true);
