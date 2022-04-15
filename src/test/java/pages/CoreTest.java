@@ -36,6 +36,4 @@ abstract public class CoreTest {
     public void tearDown() {
         Selenide.closeWebDriver();
     }
-
-
 }
