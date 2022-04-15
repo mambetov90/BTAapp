@@ -3,14 +3,14 @@ package pages;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.byCssSelector;
 import static com.codeborne.selenide.Selenide.$;
 
 public class PolicyPage extends CoreTest {
 
-    public final SelenideElement insuredTravelerFirstName = $(byId("travelerFirstName0")),
-            insuredTravelerLastName = $(byId("travelerLastName0")),
-            insuredTravelerPersonalId = $(byId("travelerIdentityNumber0")),
+    public final SelenideElement insuredTravelerFirstName = $(byCssSelector("#travelerFirstName0 input")),
+            insuredTravelerLastName = $(byCssSelector("#travelerLastName0 input")),
+            insuredTravelerPersonalId = $(byCssSelector("#travelerIdentityNumber0 input")),
             whatCoveredPopup = $("div[class='covered-popup-travel']");
 
     static final SelenideElement whatsCoveredButton = $("button[data-param='{\"id\":\"OPP\"}'] span[class='title popup-title']"),

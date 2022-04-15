@@ -1,19 +1,10 @@
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.CoreTest;
 
-import java.time.Duration;
-
+import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byId;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
 import static org.junit.Assert.assertTrue;
 
 public class BtaTest extends CoreTest {
@@ -58,14 +49,14 @@ public class BtaTest extends CoreTest {
         policyPage
                 .closeWhatCoveredPopupAndContinue();
 
-        assertTrue(policyPage.insuredTravelerFirstName.shouldBe(visible).isDisplayed());
-        assertTrue(policyPage.insuredTravelerFirstName.getAttribute("data-store-value").isEmpty());
+        policyPage.insuredTravelerFirstName.shouldBe(visible);
+        policyPage.insuredTravelerFirstName.shouldBe(empty);
 
-        assertTrue(policyPage.insuredTravelerLastName.shouldBe(visible).isDisplayed());
-        assertTrue(policyPage.insuredTravelerLastName.getAttribute("data-store-value").isEmpty());
+        policyPage.insuredTravelerLastName.shouldBe(visible);
+        policyPage.insuredTravelerLastName.shouldBe(empty);
 
 
-        assertTrue(policyPage.insuredTravelerPersonalId.should(visible).isDisplayed());
-        assertTrue(policyPage.insuredTravelerPersonalId.getAttribute("data-store-value").isEmpty());
+        policyPage.insuredTravelerPersonalId.should(visible);
+        policyPage.insuredTravelerPersonalId.shouldBe(empty);
     }
 }
