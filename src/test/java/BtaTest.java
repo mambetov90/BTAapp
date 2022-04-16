@@ -51,11 +51,8 @@ public class BtaTest extends CoreTest {
 
         policyPage.insuredTravelerFirstName.shouldBe(visible);
         policyPage.insuredTravelerFirstName.shouldBe(empty);
-
         policyPage.insuredTravelerLastName.shouldBe(visible);
         policyPage.insuredTravelerLastName.shouldBe(empty);
-
-
         policyPage.insuredTravelerPersonalId.should(visible);
         policyPage.insuredTravelerPersonalId.shouldBe(empty);
     }
