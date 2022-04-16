@@ -23,7 +23,7 @@ public class BtaTest extends CoreTest {
                 .selectFinalDestinationFromPopup()
                 .searchForIndiaAsCountry();
 
-        assertTrue(travelInsurancePage.indiaCountryLabel.shouldBe(visible).isDisplayed());
+        travelInsurancePage.indiaCountryLabel.shouldBe(visible);
 
         log.info("Nomainīt  aktivitāti uz “Sports” Pārbaudīt vai aktivitāte nomainīta");
         travelInsurancePage
