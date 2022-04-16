@@ -15,8 +15,7 @@ public class BtaTest extends CoreTest {
     public void insurancePolicyTest() {
 
         log.info("Atvērt BTA portālu un pārvietoties uz ceļojuma polišu iegādes formu");
-        mainPage
-                .openTravelFromMenuPanel();
+        mainPage.openTravelFromMenuPanel();
 
         log.info("Nomainīt ceļojumā mērķi uz Indija izmantojot “Izvēlies valstis un Pārbaudīt vai ceļojuma mērķis ir nomainīts");
         travelInsurancePage
@@ -32,22 +31,20 @@ public class BtaTest extends CoreTest {
                 .openActivitiesList()
                 .selectSportFromActivityTypePopup();
 
-        assertTrue(travelInsurancePage.sportAsActivityLabel.shouldBe(visible).isDisplayed());
+        travelInsurancePage.sportAsActivityLabel.shouldBe(visible);
 
         log.info("Pārvietoties uz otro soli");
-        travelInsurancePage
-                .pressCalculateTravelInsurancePrice();
+        travelInsurancePage.pressCalculateTravelInsurancePrice();
 
         log.info("Izvēlēties Optimal un Atvērt ”Apskati, kas ir apdrošināts” izvēlētajai programmai, kā arī pārbaudīt vai uzlecošā forma ir atvērusies");
         policyPage
                 .chooseOptimalPlusAsPolicyPlan()
                 .openWhatCoveredPopup();
 
-        assertTrue(policyPage.whatCoveredPopup.shouldBe(visible).isDisplayed());
+        policyPage.whatCoveredPopup.shouldBe(visible);
 
         log.info("Aizvērt, pārvietoties uz nākamo soli un pārbaudīt vai ceļotāja lauki ir redzami un tie ir tukši");
-        policyPage
-                .closeWhatCoveredPopupAndContinue();
+        policyPage.closeWhatCoveredPopupAndContinue();
 
         policyPage.insuredTravelerFirstName.shouldBe(visible);
         policyPage.insuredTravelerFirstName.shouldBe(empty);
